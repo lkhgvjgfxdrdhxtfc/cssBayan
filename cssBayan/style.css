@@ -1,0 +1,120 @@
+* {
+box-sizing: border-box;
+border: none;
+}
+  
+body {
+display: flex;
+  justify-content: center;
+}
+
+.container {
+max-width: 1920px;
+width: 60%;
+margin: 0 auto;
+background-color: #D1FA2C;
+padding: 3%;
+overflow: hidden;
+}
+  
+.container label {
+cursor: pointer;
+display: block;
+font-weight: bold;
+font-size: 1.2em;
+}
+
+.container label:hover {
+color: black;
+}
+.container input{
+display: none;
+}
+
+.container input:checked + label {
+color: black;
+}
+
+.container input:checked + label + .acor-body {
+height: auto;
+color: black;
+}
+
+.container .acor-body {
+margin: 0.5em auto;
+height: 0;
+color: black;
+box-sizing: border-box;
+transition: color 0.5s, padding 0.5s;
+overflow: hidden;
+}
+
+.acor-body {
+display: flex;
+justify-content: center;
+width: 100%;
+}
+
+label {
+border-top: 0.1em solid grey;
+padding-top: 0.5em;
+}
+
+.bayan {
+color: blue;
+}
+
+.bayan:hover {
+color: black;
+}
+
+
+@media (hover: hover) and (pointer: fine) {
+  
+.container input:hover + label + .acor-body {
+height: auto;
+color: black;
+}
+  
+}
+
+@media screen and (max-width: 767px) {
+.container {
+width: 90%;
+padding: 2%;
+}
+
+label {
+padding-top: 0.2em;
+}
+
+.container .acor-body {
+margin: 0.2em auto;
+}
+  
+.container label {
+font-size: 0.8em;
+}
+
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  .container {
+width: 75%;
+padding: 2%;
+}
+
+label {
+padding-top: 0.3em;
+}
+
+.container .acor-body {
+margin: 0.3em auto;
+}
+  
+.container label {
+font-size: 1em;
+}
+
+}
